@@ -11,5 +11,57 @@ body {
 
 header {
     background-color: #333;
-    
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+}
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.product-name {
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+.price {
+    color: #f60;
+    font-size: 1.1em;
+    margin-bottom: 10px;
 }
