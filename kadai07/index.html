@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ひだまりソリューションズ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class = "container">
+        <header>
+            <h1>ひだまりソリューションズ</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">会社概要</a></li>
+                    <li><a href="#services">サービス</a></li>
+                    <li><a href="#cobtact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="about">
+            <h2>会社概要</h2>
+            <p>
+                私たちは地域密着型のITソリューション企業として、クラウド導入やウェブ制作を通じた業務改善を支援しています。
+            </p>
+        </section>
+
+        <section id="services">
+            <h2>サービス紹介</h2>
+            <div class="card">
+                <img src="img/service.jpg" alt="web制作イメージ">
+                <h3>web制作</h3>
+                <p>スマートフォン対応のモダンなWebサイトを制作します。</p>
+            </div>
+            <div class="card">
+                <img src="img/service.jpg" alt="クラウド導入支援イメージ">
+                <h3>クラウド導入支援</h3>
+                <p>Google WorkspaceやMicrosoft 365などの導⼊をサポートします。</p>
+            </div>
+            <div class="card">
+                <img src="img/service.jpg" alt="デジタル研修イメージ">
+                <h3>デジタル研修</h3>
+                <p>中小企業向けのITリテラシー研修も承っています。</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>お問い合わせ</h2>
+            <form>
+                <label for="name">お名前</label>
+                    <input type="text" id="name" name="name" required />
+
+                    <label for="email">メールアアドレス</label>
+                    <input type="email" id="email" name="email" required />
+
+                    <label for="message">メッセージ</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">送信</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
