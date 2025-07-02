@@ -16,7 +16,7 @@ body {
 header {
     text-align: center;
     padding: 30px 0;
-    background-color: #4caf50;
+    background-color: #003399;
     color: white;
 }
 
@@ -85,7 +85,7 @@ form textarea {
 form button {
   margin-top: 15px;
   padding: 10px;
-  background-color: #4caf50;
+  background-color: #003399;
   color: white;
   border: none;
   font-size: 16px;
@@ -94,7 +94,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #45a049;
+  background-color: #003399;
 }
 
 @media (max-width: 600px) {
