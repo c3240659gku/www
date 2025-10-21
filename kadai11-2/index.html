@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配列の利用</title>
+    <style>
+        body {
+            font-family: "Meiryo", sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        table {
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th,td {
+            border: 1px solid #000;
+            padding: 8px 15px;
+            text-align: center;
+        }
+        th {
+            background-color: #ffcc99;
+        }
+        td {
+            background-color: #fff;
+        }
+        button {
+            padding: 5px 10px;
+        }
+    </style>
+    <script>
+        let a = [500,900,1200];
+        let b = [10,16,8];
+
+        function multiply_0() {
+            let answer = a[0] * b[0];
+            alert("料金は" + answer + "円です");
+        }
+        function multiply_1() {
+            let answer = a[1] * b[1];
+            alert("料金は" + answer + "円です");
+        }
+        function multiply_2() {
+            let answer = a[2] * b[2];
+            alert("料金は" + answer + "円です");
+        }
+    </script>
+</head>
+
+<body>
+    <h1>利用料の計算</h1>
+    
+    <table>
+        <tr>
+            <th>No.</th>
+            <th>料金(a)</th>
+            <th>人数(b)</th>
+            <th>a×b</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>500</td>
+            <td>10</td>
+            <td><button onclick="multiply_0()">利用料の合計</button></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>980</td>
+            <td>16</td>
+            <td><button onclick="multiply_1()">利用料の合計</button></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>1200</td>
+            <td>8</td>
+            <td><button onclick="multiply_2()">利用料の合計</button></td>
+        </tr>
+    </table>
+</body>
+</html>
