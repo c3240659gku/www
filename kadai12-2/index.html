@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>座席の予約</title>
+    <style>
+        h1{
+            font-weight: bold;
+        }
+        #status {
+            color: red;
+        }
+        #thanks {
+            color: navy;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>座席の予約</h1>
+    <p>東京会場 <span id="status"> (予約受付中) </span></p>
+    <button id="reserveBtn" onclick="reserve()">予約する</button>
+    <p id="thanks"></p>
+    <script>
+        function reserve() {
+            document.getElementById("status").textContent = "(予約済み)";
+            document.getElementById("reserveBtn").style.display = "none";
+            document.getElementById("thanks").textContent = "ありがとうございました。";
+        }
+    </script>
+</body>
+</html>
