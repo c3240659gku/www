@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>複数の要素の取得</title>
+    <style>
+        body {
+            font-family: "Meiryo";
+            margin: 30px;
+        }
+
+        img {
+            width: 80px;
+            height: 50px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>人口の多い国ランキング</h1>
+
+    <ol id="countryList">
+        <p>1.中国</p>
+        <p>2.インド</p>
+        <p>3.アメリカ</p>
+        <p>4.インドネシア</p>
+    </ol>
+
+    <button onclick="changeToFlag()">国旗で表示</button>
+
+     <script>
+        function changeToFlag() {
+            const flags = [
+                "china.png",
+                "india.png",
+                "america.png",
+                "indonesia.png"
+            ];
+
+            let items = document.querySelectorAll("#countryList li");
+
+            for (let i = 0; i < items.length; i++) {
+                items[i].innerHTML = `<img src="${flags[i]}" alt="国旗">`;
+            }
+        }
+    </script>
+</body>
+</html>
