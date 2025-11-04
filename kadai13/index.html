@@ -30,8 +30,8 @@
 
     <button onclick="changeToFlag()">国旗で表示</button>
 
-     <script>
-        function changeToFlag() {
+    <script>
+        document.getElementById("changeBtn").onclick = function () {
             const flags = [
                 "china.png",
                 "india.png",
@@ -39,12 +39,12 @@
                 "indonesia.png"
             ];
 
-            let items = document.querySelectorAll("#countryList li");
+            const items = document.querySelectorAll("#countryList li");
 
             for (let i = 0; i < items.length; i++) {
                 items[i].innerHTML = `<img src="${flags[i]}" alt="国旗">`;
             }
-        }
+        };
     </script>
 </body>
 </html>
