@@ -11,7 +11,8 @@
   </style>
 </head>
 <body>
-
+    <h1>写真の一覧</h1>
+    <p>以下のボタンをクリックすると、写真が一覧表示されます。</p>
   <button id="btn">写真を表示</button>
   <div id="photoArea"></div>
 
@@ -20,14 +21,14 @@
       const photoArea = document.getElementById("photoArea");
 
       let html = `
-        <img src="photo1.jpg" alt="">
-        <img src="photo2.jpg" alt="">
-        <img src="photo3.jpg" alt="">
-        <img src="photo4.jpg" alt="">
-        <img src="photo5.jpg" alt="">
-        <img src="photo6.jpg" alt="">
-        <img src="photo7.jpg" alt="">
-        <img src="photo8.jpg" alt="">
+        <img src="photo1.jpg" alt="写真1">
+        <img src="photo2.jpg" alt="写真2">
+        <img src="photo3.jpg" alt="写真3">
+        <img src="photo4.jpg" alt="写真4">
+        <img src="photo5.jpg" alt="写真5">
+        <img src="photo6.jpg" alt="写真6">
+        <img src="photo7.jpg" alt="写真7">
+        <img src="photo8.jpg" alt="写真8">
       `;
 
       photoArea.insertAdjacentHTML("beforeend", html);
