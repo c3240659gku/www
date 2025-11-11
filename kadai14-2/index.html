@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>入場料の一覧</title>
+<style>
+  body {
+    font-family: "Yu Gothic", sans-serif;
+    margin: 40px;
+  }
+  h1 {
+    font-size: 1.8em;
+  }
+  table {
+    border-collapse: collapse;
+    width: 600px;
+    text-align: center;
+  }
+  th, td {
+    border: 1px solid #555;
+    padding: 8px 12px;
+  }
+  th {
+    background-color: #8ccaca;
+  }
+  tr:nth-child(even) td {
+    background-color: #f7f7f7;
+  }
+</style>
+</head>
+<body>
+
+<h1>入場料の一覧</h1>
+<table id="feeTable">
+  <thead>
+    <tr id="headerRow"></tr>
+  </thead>
+  <tbody id="bodyRows"></tbody>
+</table>
+
+<script>
+const headers = ["人数", "大人", "高校生", "中学生", "小学生"];
+const basePrices = {
+  "大人": 800,
+  "高校生": 680,
+  "中学生": 450,
+  "小学生": 380
+};
+const maxPeople = 5; 
+
+const headerRow = document.getElementById("headerRow");
+headers.forEach(title => {
+  const th = document.createElement("th");
+  th.textContent = title;
+  headerRow.appendChild(th);
+});
+
+const body = document.getElementById("bodyRows");
+
+for (let i = 1; i <= maxPeople; i++) {
+  const tr = document.createElement("tr");
+
+  const peopleTd = document.createElement("td");
+  peopleTd.textContent = `${i}人`;
+  tr.appendChild(peopleTd);
+  
+  for (let category in basePrices) {
+    const td = document.createElement("td");
+    td.textContent = `${basePrices[category] * i}円`;
+    tr.appendChild(td);
+  }
+  
+  body.appendChild(tr);
+}
+</script>
+
+</body>
+</html>
