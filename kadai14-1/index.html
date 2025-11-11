@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>07-2 写真一覧表示</title>
+  <style>
+    #photoArea img {
+      width: 200px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="btn">写真を表示</button>
+  <div id="photoArea"></div>
+
+  <script>
+    document.getElementById("btn").onclick = function() {
+      const photoArea = document.getElementById("photoArea");
+
+      let html = `
+        <img src="photo1.jpg" alt="">
+        <img src="photo2.jpg" alt="">
+        <img src="photo3.jpg" alt="">
+        <img src="photo4.jpg" alt="">
+        <img src="photo5.jpg" alt="">
+        <img src="photo6.jpg" alt="">
+        <img src="photo7.jpg" alt="">
+        <img src="photo8.jpg" alt="">
+      `;
+
+      photoArea.insertAdjacentHTML("beforeend", html);
+
+      this.remove();
+    }
+  </script>
+
+</body>
+</html>
