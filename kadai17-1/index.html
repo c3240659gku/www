@@ -21,27 +21,23 @@
    <script>
 function show() {
 
-    let anser = [];   // 解を保存する配列
-    let count = 0;    // 見つけた解の数
+    let anser = [];   
+    let count = 0;   
 
     for (let x = 1; x <= 1000; x++) {
 
-        // 方程式の値を計算
         let y = x*x*x - 53*x*x + 620*x - 1036;
 
-        // y = 0 なら解
         if (y === 0) {
             anser[count] = x;
             count++;
         }
 
-        // 解が3つ見つかったら終了
         if (count === 3) {
             break;
         }
     }
-
-    // 表示
+    
     document.getElementById("message").textContent =
         anser[0] + "、" + anser[1] + "、" + anser[2] + " が解です。";
 }
