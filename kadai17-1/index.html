@@ -18,22 +18,34 @@
     <button onclick="show()">結果を見る</button>
     <div id="message" class="big_font"></div>
 
-    <script>
-        function show(){
-            let anser = [];
-            let count = 0;
-            for (let x = 1;x <= 1000; x++) {
-                let y = x*x*x-53*x*x+620*x-1036;
-                if (y == 0){
-                    anser[count] = x;
-                    count++;
-                }
-                if(count == 3){
-                    break;
-                }
-            }
-            document.getElementById("message").textContest = anser [0] + "、" + anser[1] + "、" + anser[2] + "が解です。";
+   <script>
+function show() {
+
+    let anser = [];   // 解を保存する配列
+    let count = 0;    // 見つけた解の数
+
+    for (let x = 1; x <= 1000; x++) {
+
+        // 方程式の値を計算
+        let y = x*x*x - 53*x*x + 620*x - 1036;
+
+        // y = 0 なら解
+        if (y === 0) {
+            anser[count] = x;
+            count++;
         }
-    </script>
+
+        // 解が3つ見つかったら終了
+        if (count === 3) {
+            break;
+        }
+    }
+
+    // 表示
+    document.getElementById("message").textContent =
+        anser[0] + "、" + anser[1] + "、" + anser[2] + " が解です。";
+}
+</script>
+
 </body>
 </html>
