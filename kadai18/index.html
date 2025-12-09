@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>関数の戻り値</title>
-    <style>
-        #result {
-            width: 300px;
-            background: #f9c48c;
-            padding:20px;
-            margin-top: 20px;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>1～10で割り切れる数字</title>
+<style>
+  #result {
+    width: 300px;
+    background: #f9c48c;
+    padding: 20px;
+    margin-top: 20px;
+  }
+</style>
 </head>
 <body>
-    <h1>1~10で割り切れる数字</h1>
-    <p>1,2,3,4,5,6,7,8,9,10で<br>
-       割り切れる最小の数値をJavaScriptで求めます。</p>
 
-    <button onclick="calcLCM()">結果を見る</button>
+<h1>1～10で割り切れる数字</h1>
+<p>1, 2, 3, 4, 5, 6, 7, 8, 9, 10 で<br>
+割り切れる最小の数値を JavaScript で求めます。</p>
 
-    <div id="result">ここに結果が表示されます。</div>
+<button onclick="calcLCM()">結果を見る</button>
 
-    <script>
-        function gcd(a,b) {
-            return b == 0 ? a : gcd(b,a%b);
-        }
+<div id="result">ここに結果が表示されます。</div>
 
-        function calcLCM() {
-            let answer = 1;
-            for(let i = 1; i<=10;i++){
-                answer = lcm(answer,i);
-            }
-            document.getElementById("result").textContent =
-                "答えは" + answer + "です。";
-        }
-    </script>
+<script>
+// 最大公約数(GCD)を求める
+function gcd(a, b) {
+  return b === 0 ? a : gcd(b, a % b);
+}
+
+// 最小公倍数(LCM)を求める
+function lcm(a, b) {
+  return (a * b) / gcd(a, b);
+}
+
+// 1〜10 の LCM を計算
+function calcLCM() {
+  let answer = 1;
+  for (let i = 1; i <= 10; i++) {
+    answer = lcm(answer, i);
+  }
+  document.getElementById("result").textContent =
+    "答えは" + answer + "です。";
+}
+</script>
+
 </body>
 </html>
