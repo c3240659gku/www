@@ -1,9 +1,13 @@
 function calc() {
+    let l = prompt("範囲の最小値を1～10で入力してください");
     let n = prompt("範囲の最大値を1～10で入力してください");
+    l = Number(l);
     n = Number(n);
     if(!Number.isInteger(n) || n < 1 || n > 10) {
+        if(!Number.isInteger(l) || l < 1 || l > 10) {
         alert("1~10の整数を入力してください");
         return;
+        }
     }
 
     function gcd(a,b) {
