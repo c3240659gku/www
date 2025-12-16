@@ -25,5 +25,5 @@ function calc() {
     }
 
     document.getElementById("result").textContent =
-        1~${n}+"で割り切れる最小の数値は"+answer+"です。";
+        n+"~"+n+"で割り切れる最小の数値は"+answer+"です。";
 }
