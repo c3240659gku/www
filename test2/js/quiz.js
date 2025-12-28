@@ -67,22 +67,19 @@ function showQuestion() {
     document.querySelector("#result").textContent = "";
 }
 
-function checkAnswer(selected,button) {
-    const correct = quiz[current].answer;
-    const result = document.getElementByld("result");
+function checkAnswer(selected) {
+    //const correct = quiz[current].answer;
+    //const result = document.getElementByld("result");
 
-    if (selected === correct) {
-        result.textContent = "〇　正解！";
-        result.className = "correct";
-        button.classList.add("correct-button");
+    if (selected === questions[current].answer) {
+        score++;
+        document.querySelector("#result").textContent = "正解！";
     } else {
-        result.textContent = "×　不正解";
-        resultt.className = "wrong";
-        button.classList.add("wrong-button");
+        document.querySelector("#result").textContent = "不正解";
     }    
 
-    const buttons = document.querySelectorAll("#choices button");
-    buttons.forEach(button => button.disabled = true);
+    //const buttons = document.querySelectorAll("#choices button");
+    //buttons.forEach(button => button.disabled = true);
 }
 
 document.querySelector("#next").addEventListener("click", () => {
