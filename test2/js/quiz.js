@@ -105,4 +105,3 @@ document.querySelector("#retry").addEventListener("click", () => {
     showQuestion();
 });
 
-showQuestion();
