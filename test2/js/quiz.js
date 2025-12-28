@@ -57,9 +57,9 @@ function showQuestion() {
     choicesDiv.innerHTML = "";
     document.getElementByld("result").textContent = "";
 
-    q.choices.forEach((choice, index) => {
+    q.choices.forEach((choices, index) => {
         const button = document.createElement("button");
-        button.textContent = choice;
+        button.textContent = choices;
         button.addEventListener("click", () => checkAnswer(index));
         choicesDiv.appendChild(button);
     });
