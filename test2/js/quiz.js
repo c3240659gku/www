@@ -55,11 +55,11 @@ function showQuestion() {
 
     const choicesDiv = document.querySelector("#choices");
     choicesDiv.innerHTML = "";
-    document.getElementByld("result").textContent = "";
+    //document.getElementByld("result").textContent = "";
 
-    q.choices.forEach((choices, index) => {
+    q.choices.forEach((choice, index) => {
         const button = document.createElement("button");
-        button.textContent = choices;
+        button.textContent = choice;
         button.addEventListener("click", () => checkAnswer(index));
         choicesDiv.appendChild(button);
     });
