@@ -81,7 +81,7 @@ document.querySelector("#next").addEventListener("click", () => {
         showQuestion();
     } else {
         let message = "";
-        if (score >= 8) {
+        if (score >= 17) {
             message = "あなたは星野源マスターです！";
         } else {
             message = "もう少し星野源を知ろう！";
