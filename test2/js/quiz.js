@@ -55,6 +55,7 @@ function showQuestion() {
 
     const choicesDiv = document.querySelector("#choices");
     choicesDiv.innerHTML = "";
+    document.getElementByld("result").textContent = "";
 
     q.choices.forEach((choice, index) => {
         const button = document.createElement("button");
@@ -66,13 +67,22 @@ function showQuestion() {
     document.querySelector("#result").textContent = "";
 }
 
-function checkAnswer(selected) {
-    if (selected === questions[current].answer) {
-        score++;
-        document.querySelector("#result").textCount = "正解!"; 
+function checkAnswer(selected,button) {
+    const correct = quiz[current].answer;
+    const result = document.getElementByld("result");
+
+    if (selected === correct) {
+        result.textContent = "〇　正解！";
+        result.className = "correct";
+        button.classList.add("correct-button");
     } else {
-        document.querySelector("#result").textContent = "不正解...";
+        result.textContent = "×　不正解";
+        resultt.className = "wrong";
+        button.classList.add("wrong-button");
     }    
+
+    const buttons = document.querySelectorAll("#choices button");
+    buttons.forEach(button => button.disabled = true):
 }
 
 document.querySelector("#next").addEventListener("click", () => {

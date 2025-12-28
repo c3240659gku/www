@@ -116,6 +116,34 @@ footer {
     margin-top: 40px;
 }
 
+
+#choices button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.correct-button {
+    background-color: #4caf50;
+    color: white;
+}
+
+.wrong-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.correct {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.wrong {
+    color: #f44336;
+    font-weight: bold;
+}
+
 @media screen and (max-wigth: 600px) {
     
     header h1 {
