@@ -2,37 +2,47 @@ const questions = [
     {
         questions: "星野源の主な活動分野はどれ？",
         choices: ["俳優のみ","歌手のみ","音楽と俳優の両方","スポーツ選手"],
-        answer: 3
+        answer: 2
     },
     {
         question: "星野源の魅力としてよく言われるのは？",
         choices: ["派手なパフォーマンス","自然体な表現","無口な性格","激しいダンス"],
-        answer: 2
+        answer: 1
     },
     {
         question: "星野源の音楽の特徴は？",
         choices: ["明るい曲","英語歌詞のみ","クラシック中心","日常を切り取った歌詞"],
-        answer: 1
+        answer: 0
     },
     {
         question: "星野源の有名な曲は？",
         choices: ["Lemon","家族になろうよ","SUN","I LOVE"],
-        answer: 3
+        answer: 2
     },
     {
         question: "星野源が活躍しているメディアは？",
         choices: ["テレビだけ","ラジオだけ","映画だけ","音楽活動・ラジオ・ドラマ"],
-        answer: 4
+        answer: 3
     },
     {
         question: "星野源の印象として正しいものは？",
         choices: ["近寄りがたい","無愛想","親しみやすい","怖い"],
-        answer: 3
+        answer: 2
     },
     {
         question: "星野源のドラマの代表作ではないものは？",
         choices: ["逃げるは恥だが役に立つ","ＭＩＵ４０４","コウノドリ","アンナチュラル"],
-        answer: 4
+        answer: 3
+    },
+    {
+        question: "星野源の楽曲の歌詞に多いテーマはどれ？",
+        choices: ["戦争","日常や感情","歴史","ファンタジー"],
+        answer: 1
+    },
+    {
+        question: "星野源の楽曲「恋」が主題歌として使われた作品は？",
+        choices: ["アニメ","CM","ドラマ","映画"],
+        answer: 2
     }
 ];
 
