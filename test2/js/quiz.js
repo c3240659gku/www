@@ -1,3 +1,4 @@
+showQuestion();
 const questions = [
     {
         questions: "星野源の主な活動分野はどれ？",
