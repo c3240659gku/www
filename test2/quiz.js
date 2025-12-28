@@ -1,0 +1,91 @@
+const questions = [
+    {
+        questions: "星野源の主な活動分野はどれ？",
+        choices: ["俳優のみ","歌手のみ","音楽と俳優の両方","スポーツ選手"],
+        answer: 3
+    },
+    {
+        question: "星野源の魅力としてよく言われるのは？",
+        choices: ["派手なパフォーマンス","自然体な表現","無口な性格","激しいダンス"],
+        answer: 2
+    },
+    {
+        question: "星野源の音楽の特徴は？",
+        choices: ["明るい曲","英語歌詞のみ","クラシック中心","日常を切り取った歌詞"],
+        answer: 1
+    },
+    {
+        question: "星野源の有名な曲は？",
+        choices: ["Lemon","家族になろうよ","SUN","I LOVE"],
+        answer: 3
+    },
+    {
+        question: "星野源が活躍しているメディアは？",
+        choices: ["テレビだけ","ラジオだけ","映画だけ","音楽活動・ラジオ・ドラマ"],
+        answer: 4
+    },
+    {
+        question: "星野源の印象として正しいものは？",
+        choices: ["近寄りがたい","無愛想","親しみやすい","怖い"],
+        answer: 3
+    },
+    {
+        question: "星野源のドラマの代表作ではないものは？",
+        choices: ["逃げるは恥だが役に立つ","ＭＩＵ４０４","コウノドリ","アンナチュラル"],
+        answer: 4
+    }
+];
+
+let current = 0;
+let score = 0;
+
+function showQuestion() {
+    const q = questions[current];
+    document.querySelector("#question").textContent = q.question;
+
+    const choicesDiv = document.querySelector("#choices");
+    choicesDiv.innerHTML = "";
+
+    q.choices.forEach((choice, index) => {
+        const button = document.createElement("button");
+        button.textContent = choice;
+        button.addEventListener("click", () => checkAnswer(index));
+        choicesDiv.appendChild(button);
+    });
+
+    document.querySelector("#result").textContent = "";
+}
+
+function checkAnswer(selected) {
+    if (selected === questions[current].answer) {
+        score++;
+        document.querySelector("#result").textCount = "正解!"; 
+    } else {
+        document.querySelector("#result").textContent = "不正解...";
+    }    
+}
+
+document.querySelector("#next").addEventListener("click", () => {
+    current++;
+    if (current < questions.length) {
+        showQuestion();
+    } else {
+        let message = "";
+        if (score >= 6) {
+            message = "あなたは星野源マスターです！";
+        } else {
+            message = "もう少し星野源を知ろう！";
+        }
+        document.querySelector("#question").textContent = `終了！ ${score} / ${questions.length} 問正解`;
+        document.querySelector("#choices").innerHTML = "";
+        document.querySelector("#result").textContent = message;
+    }
+});
+
+document.querySelector("#retry").addEventListener("click", () => {
+    current = 0;
+    score = 0;
+    showQuestion();
+});
+
+showQuestion();
