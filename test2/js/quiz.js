@@ -82,7 +82,7 @@ function checkAnswer(selected,button) {
     }    
 
     const buttons = document.querySelectorAll("#choices button");
-    buttons.forEach(button => button.disabled = true):
+    buttons.forEach(button => button.disabled = true);
 }
 
 document.querySelector("#next").addEventListener("click", () => {
